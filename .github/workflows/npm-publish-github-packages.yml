@@ -1,30 +1,64 @@
-name: Node.js CI
+# name: Node.js CI
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#     - name: Checkout Repository
+#       uses: actions/checkout@v2
+
+#     - name: Setup Node.js
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: '16'
+
+#     - name: Install Dependencies
+#       run: npm install
+
+#     - name: Run Tests
+#       run: npm test
+
+#     - name: Run Coverage and Upload to Coveralls
+#       env:
+#         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+#       run: npm run coverage
+
+
+name: Coveralls
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  coveralls:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: v22.11.0 
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run Tests
-      run: npm test
-
-    - name: Run Coverage and Upload to Coveralls
-      env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-      run: npm run coverage
+      - name: Run tests and send coverage to Coveralls
+        run: |
+          npm run coverage  # This will run coverage script (c8 npm test)
+          npm install coveralls  # Install Coveralls CLI
+          cat ./coverage/lcov-report/index.html | coveralls  # Send coverage data to Coveralls
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
