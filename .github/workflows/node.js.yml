@@ -23,10 +23,10 @@ jobs:
           npm install  
 
       - name: Run tests with coverage
-        run: npm test -- --coverage || exit 0 # This ensures Coveralls runs even if previous steps have failed
+        run: npm test -- --coverage || exit 0 
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
-        env:
+        with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          coveralls-token: ${{ secrets.COVERALLS_TOKEN }}
