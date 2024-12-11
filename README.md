@@ -45,7 +45,7 @@ This project aims to evaluate the usability and maturity of the provided utility
 - Ensure your GitHub repository is connected to Coveralls.
 
 ### How to Run Tests
-**Run all tests Locally**:
+**Run All Tests Locally**:
  ```bash
 npm test
 ```
