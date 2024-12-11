@@ -37,29 +37,29 @@ Optional tools:
     npm test
     
 ### CI Pipeline
-***GitHub Actions Workflow***:
+**GitHub Actions Workflow**:
 - A pre-configured .github/workflows/node_test.yml file ensures automated testing on every push.
 
-***Coveralls Integration***:
+**Coveralls Integration**:
 - Link your repository to Coveralls for test coverage reporting. 
 - Ensure your GitHub repository is connected to Coveralls.
 
 ### How to Run Tests
 Locally
-***Run all tests with***:
+**Run all tests with**:
  ```bash
 npm test
 
 ### CI Pipeline
-Push changes to the repository. The pipeline runs automatically, executing all tests and generating coverage reports.
+- Push changes to the repository. The pipeline runs automatically, executing all tests and generating coverage reports.
 
-***Generate Coverage Reports Locally***:
+**Generate Coverage Reports Locally**:
  ```bash
 npm run coverage
 
-*** Coverage Reports***
-Coverage reports are generated using Jest and uploaded to Coveralls.
-Add the Coveralls badge to your repository README for easy access.
+**Coverage Reports**
+- Coverage reports are generated using Jest and uploaded to Coveralls.
+- Add the Coveralls badge to your repository README for easy access.
 
 
 
