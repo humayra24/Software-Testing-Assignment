@@ -19,7 +19,7 @@ This project aims to evaluate the usability and maturity of the provided utility
 
 Optional tools:  
  A virtual machine for isolated environment testing.
-  ---
+  
 
 ## Setup Instructions
 
@@ -38,11 +38,11 @@ Optional tools:
     
 ### CI Pipeline
 ***GitHub Actions Workflow***:
-A pre-configured .github/workflows/node_test.yml file ensures automated testing on every push.
+- A pre-configured .github/workflows/node_test.yml file ensures automated testing on every push.
 
 ***Coveralls Integration***:
-Link your repository to Coveralls for test coverage reporting. 
-Ensure your GitHub repository is connected to Coveralls.
+- Link your repository to Coveralls for test coverage reporting. 
+- Ensure your GitHub repository is connected to Coveralls.
 
 ### How to Run Tests
 Locally
