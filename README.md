@@ -17,7 +17,7 @@ This project aims to evaluate the usability and maturity of the provided utility
    - [Node.js Homepage](https://nodejs.org/en)  
 3. **npm**: Node package manager, included with Node.js installation.  
 
-Optional tools:  
+***Optional tools***:  
  A virtual machine for isolated environment testing.
   
 
@@ -49,14 +49,11 @@ Locally
 **Run all tests with**:
  ```bash
 npm test
-
-### CI Pipeline
-- Push changes to the repository. The pipeline runs automatically, executing all tests and generating coverage reports.
-
+```
 **Generate Coverage Reports Locally**:
  ```bash
 npm run coverage
-
+```
 **Coverage Reports**
 - Coverage reports are generated using Jest and uploaded to Coveralls.
 - Add the Coveralls badge to your repository README for easy access.
