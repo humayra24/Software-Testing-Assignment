@@ -4,3 +4,60 @@
 
 This repository contains unit tests and continuous integration (CI) pipeline setup for the E-Commerce utility library. The testing framework includes GitHub Actions for CI and Coveralls for test coverage reporting.
 
+## Overview
+This project aims to evaluate the usability and maturity of the provided utility library for the E-Commerce application. It includes:
+- Unit tests for critical library functions using **Jest**.
+- CI pipeline configuration using **GitHub Actions**.
+- Coverage reporting integrated with **Coveralls**.
+
+## Prerequisites
+1. **Git**: Version control tool to clone and manage the repository.  
+   - [Git Homepage](https://git-scm.com)
+2. **Node.js**: JavaScript runtime environment (version 14 or later recommended).  
+   - [Node.js Homepage](https://nodejs.org/en)  
+3. **npm**: Node package manager, included with Node.js installation.  
+
+Optional tools:  
+- A virtual machine for isolated environment testing.
+  ---
+
+## Setup Instructions
+
+### Local Environment
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/humayra24/Software-Testing-Assignment.git
+
+2. **Install Dependencies**:
+   npm install
+
+3.  **Run a Simple Test (to verify setup)**:
+    npm test
+    
+### CI Pipeline
+***GitHub Actions Workflow***:
+A pre-configured .github/workflows/node_test.yml file ensures automated testing on every push.
+
+***Coveralls Integration***:
+Link your repository to Coveralls for test coverage reporting. 
+Ensure your GitHub repository is connected to Coveralls.
+
+### How to Run Tests
+Locally
+***Run all tests with***:
+npm test
+
+### CI Pipeline
+Push changes to the repository. The pipeline runs automatically, executing all tests and generating coverage reports.
+
+***Generate Coverage Reports Locally***:
+npm run coverage
+
+*** Coverage Reports
+Coverage reports are generated using Jest and uploaded to Coveralls.
+Add the Coveralls badge to your repository README for easy access.
+
+
+
+
+
